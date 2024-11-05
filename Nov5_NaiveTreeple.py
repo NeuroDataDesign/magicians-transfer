@@ -16,7 +16,7 @@ class NaiveTransferRandomForest:
     def transfer_train(self, X, y):
         if self.is_trained is False:
             raise RuntimeError("Pre_train() first.")
-        self.model.fit(X, y)
+        self.model.partial_fit(X, y)
         print("Transfer training completed.")
 
     def predict(self, X, y):
